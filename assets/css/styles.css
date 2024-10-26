@@ -1,0 +1,213 @@
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+header {
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: -webkit-linear-gradient();
+}
+body{
+  background: #ffff;
+}
+section {
+  padding: 80px 20px;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+button {
+  top:50%;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none; 
+  border-radius:10px; 
+  padding:15px;
+  min-height:30px; 
+  min-width: 120px;
+}
+
+button.email:hover {
+  background-color: red;
+}
+
+button.linkedin:hover {
+  background-color: blue;
+}
+
+
+/* Mengatur jarak antar section */
+section:not(:last-child) {
+  margin-bottom: 20px; /* Jarak antar section */
+}
+
+
+.nav-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 20px 15px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.nav-links li{
+  list-style: none;
+  margin: 0 12px;
+}
+.nav-links li a{
+  position: relative;
+  color: #333;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 6px 0;
+  text-decoration: none;
+}
+.nav-links li a:before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: #34efdf;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+.nav-links li a:hover:before{
+  width: 100%;
+}
+.nav-links li.center a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.upward a:before{
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav-links li.forward a:before{
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease;
+}
+.nav-links li.forward a:hover:before{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* Kontainer utama dengan lebar lebih sempit */
+.content-sidebar {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 600px; /* Lebar kontainer utama */
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f8f9fa;
+  margin-top: 25px;
+  gap: 20px; /* Jarak antara sidebar dan konten */
+}
+
+/* Sidebar dengan kategori di atas kiri */
+.sidebar {
+  width: 200px; /* Lebar sidebar */
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+/* Menyusun daftar kategori secara vertikal */
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  padding: 8px;
+  background-color: #e0e0e0;
+  margin-bottom: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.category-list li.active {
+  background-color: #0077b5;
+  color: white;
+}
+
+/* Collapse header styling */
+.collapse-header {
+  padding: 8px;
+  background-color: #e0e0e0;
+}
+
+/* Collapse content styling */
+.collapse-content {
+  display: none; /* Mulai dengan tersembunyi */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.collapse-content li {
+  padding: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.collapse-content li:hover {
+  background-color: #0077b5;
+  color: white;
+}
+
+/* Struktur konten */
+.portfolio {
+  padding: 10px;
+  flex-grow: 1; /* Agar portofolio mengisi sisa ruang di sebelah sidebar */
+}
+
+/* Mengatur isi kategori dengan grid */
+.category-content {
+  display: none;
+}
+
+.category-content.active {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Maksimal tiga item per baris */
+  gap: 10px;
+  justify-items: center;
+}
+
+.project-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  width: 80px;
+}
+
+.project-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.project-item p {
+  font-size: 14px;
+  margin: 0;
+  color: #333;
+}
+
+
+
+

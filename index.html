@@ -4,21 +4,122 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Portfolio</title>
-  <link rel="stylesheet" href="styles.css"> 
+  <link rel="stylesheet" href="assets/css/styles.css"> 
 </head>
 <body>
-  <body>
     <header>
-        <h1>Welcome to My Portfolio</h1>
+        <ul class="nav-links">
+          <li><a href="#">About Me</a></li>
+          <li class="center"><a href="#">Skills</a></li>
+          <li class="upward"><a href="#">Portfolio</a></li>
+          <li class="forward"><a href="#feedback">Contact</a></li>
+        </ul>
     </header>
-    <section>
-        <h2>About Me</h2>
-        <p>Introduce yourself here.</p>
+
+    <section id="about-me">
+      <h1>About Me</h1>
+      <p>Hello! I'm a passionate web developer with a love for creating clean and efficient code. I enjoy working on projects that allow me to grow and challenge my skills.</p>
     </section>
-    <section>
-        <h2>Projects</h2>
-        <p>Showcase your projects here.</p>
+
+    <section id="skills">
+      <h1>My skills</h1>
+      <p>I offer a range of services including web development, mobile development, and UX/UI design.</p>
     </section>
+  
+    <section id="portfolio" class="portfolio">
+      <h1 style="text-align: center;">Portfolio</h1>
+      <p style="text-align: center;">Here you will find some of my recent work and projects.</p>
+    
+      <div class="content-sidebar">
+        <div class="sidebar">
+          <ul class="category-list">
+            <li onclick="showCategory('all')" class="active">All</li>
+            <li>
+              <div class="collapse-header" onclick="toggleCollapse('mobile-dropdown')">Mobile Apps</div>
+              <ul id="mobile-dropdown" class="collapse-content">
+                <li onclick="showCategory('android-native')" style="font-size: small; align-items: end;">Android</li>
+                <li onclick="showCategory('flutter')" style="font-size: small;">Cross Platform</li>
+              </ul>
+            </li>
+            <li onclick="showCategory('backend')">Back End</li>
+          </ul>
+        </div>
+    
+        <div class="portfolio">
+          <div id="all" class="category-content active">
+            <div class="project-item">
+              <img src="assets/img/android.png" alt="Android Project 1 Icon">
+              <p>Culinarix</p>
+            </div>
+            <div class="project-item">
+              <img src="assets/img/android.png" alt="Android Project 2 Icon">
+              <p>Kpass</p>
+            </div>
+            <div class="project-item">
+              <img src="flutter-icon1.png" alt="Flutter Project 1 Icon">
+              <p>Flutter Project 1</p>
+            </div>
+            <div class="project-item">
+              <img src="flutter-icon2.png" alt="Flutter Project 2 Icon">
+              <p>Flutter Project 2</p>
+            </div>
+            <div class="project-item">
+              <img src="backend-icon1.png" alt="Back End Project 1 Icon">
+              <p>Back End Project 1</p>
+            </div>
+            <div class="project-item">
+              <img src="backend-icon2.png" alt="Back End Project 2 Icon">
+              <p>Back End Project 2</p>
+            </div>
+          </div>
+    
+          <div id="android-native" class="category-content">
+            <div class="project-item">
+              <img src="assets/img/android.png" alt="Android Project 1 Icon">
+              <p>Culinarix</p>
+            </div>
+            <div class="project-item">
+              <img src="assets/img/android.png" alt="Android Project 2 Icon">
+              <p>Kpass</p>
+            </div>
+          </div>
+    
+          <div id="flutter" class="category-content">
+            <div class="project-item">
+              <img src="flutter-icon1.png" alt="Flutter Project 1 Icon">
+              <p>Flutter Project 1</p>
+            </div>
+            <div class="project-item">
+              <img src="flutter-icon2.png" alt="Flutter Project 2 Icon">
+              <p>Flutter Project 2</p>
+            </div>
+          </div>
+    
+          <div id="backend" class="category-content">
+            <div class="project-item">
+              <img src="backend-icon1.png" alt="Back End Project 1 Icon">
+              <p>Back End Project 1</p>
+            </div>
+            <div class="project-item">
+              <img src="backend-icon2.png" alt="Back End Project 2 Icon">
+              <p>Back End Project 2</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+    <section id="feedback">
+      <h1>Contact Me</h1>
+      <p>Feel free to reach out me for collaborations.</p>
+      <button class="email">Email</button>
+      <button class="linkedin">Linkedin</button>
+    </section>
+
+    <script src="script.js"></script>
 </body>
-</body>
+
 </html>
